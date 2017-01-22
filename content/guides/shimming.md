@@ -11,7 +11,7 @@ contributors:
 
 ## Prefer unminified CommonJS/AMD files over bundled `dist` versions.
 
-Most modules link the `dist` version in the `main` field of their `package.json`. While this is useful for most developers, for webpack it is better to alias the src version because this way webpack is able to optimize dependencies better. However in most cases `dist` works fine as well.
+Most modules link the `dist` version in the `main` field of their `package.json`. While this is useful for most developers, for webpack it is better to alias the src version because this way webpack is able to optimize dependencies better. However, in most cases `dist` works fine as well.
 
 ``` javascript
 // webpack.config.js
@@ -74,7 +74,7 @@ module.exports = {
 
 ## `exports-loader`
 
-Let's say a library creates a global variable that it expects it's consumers to use. In this case we can use [`exports-loader`](/loaders/exports-loader/), to export that global variable in CommonJS format. For instance, in order to export `file` as `file` and `helpers.parse` as `parse`:
+Let's say a library creates a global variable that it expects its consumers to use; In this case, we can use [`exports-loader`](/loaders/exports-loader/), to export that global variable in CommonJS format. For instance, in order to export `file` as `file` and `helpers.parse` as `parse`:
 
 **webpack.config.js**
 ```javascript
